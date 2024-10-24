@@ -1,3 +1,5 @@
+import Detail from "../Detail/Detail"
+import Slider from "../Slider/Slider"
 import Banner from "./Banner/Banner"
 import Film from "./FilmThumNail/FIlm"
 import Footer from "./Footer/Footer"
@@ -7,11 +9,13 @@ const Layout = ()=>{
     return (
         <>
             <Header/>
-            <Banner/>
+            {/* <Banner/>
             <Film/>
             <Film/>
             <Film/>
             <Film/>
+            <Slider/> */}
+            <Detail/>
             <Footer/>
         </>
     )

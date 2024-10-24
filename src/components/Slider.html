@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider Card với Tailwind CSS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Ẩn thanh cuộn ngang */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE và Edge */
+      scrollbar-width: none;     /* Firefox */
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <div class="max-w-screen-lg mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-6 text-center">Slider Card với Tailwind CSS</h1>
+
+    <!-- Container chính của slider -->
+    <div class="relative">
+      <!-- Nút lùi -->
+      <button id="prevBtn" 
+              class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full">
+        &#9664;
+      </button>
+
+      <!-- Danh sách card -->
+      <div id="slider" 
+           class="flex overflow-x-auto space-x-6 no-scrollbar transition-transform duration-300">
+        <!-- Card 1 -->
+        <div class="min-w-[300px] bg-white rounded-lg shadow-md p-4">
+          <h2 class="text-xl font-semibold">Card 1</h2>
+          <p class="mt-2 text-gray-600">Nội dung của card 1.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="min-w-[300px] bg-white rounded-lg shadow-md p-4">
+          <h2 class="text-xl font-semibold">Card 2</h2>
+          <p class="mt-2 text-gray-600">Nội dung của card 2.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="min-w-[300px] bg-white rounded-lg shadow-md p-4">
+          <h2 class="text-xl font-semibold">Card 3</h2>
+          <p class="mt-2 text-gray-600">Nội dung của card 3.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="min-w-[300px] bg-white rounded-lg shadow-md p-4">
+          <h2 class="text-xl font-semibold">Card 4</h2>
+          <p class="mt-2 text-gray-600">Nội dung của card 4.</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="min-w-[300px] bg-white rounded-lg shadow-md p-4">
+          <h2 class="text-xl font-semibold">Card 5</h2>
+          <p class="mt-2 text-gray-600">Nội dung của card 5.</p>
+        </div>
+      </div>
+
+      <!-- Nút tiến -->
+      <button id="nextBtn" 
+              class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full">
+        &#9654;
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById('slider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    // Tính toán khoảng lướt
+    const scrollAmount = 300;
+
+    prevBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

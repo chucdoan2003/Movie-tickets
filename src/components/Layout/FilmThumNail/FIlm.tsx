@@ -16,7 +16,7 @@ const Film = ()=>{
                     <div className="w-56 rounded-md">
                         <img src={latest1} alt="" className="w-full overflow-hidden object-cover rounded-md " />
                     </div>
-                </a>
+                </a> 
                 <a href="" className="mt-3">
                     <div className="w-56 rounded-md">
                         <img src={latest2} alt="" className="w-full overflow-hidden object-cover rounded-md " />
