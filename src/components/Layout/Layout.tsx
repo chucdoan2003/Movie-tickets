@@ -1,4 +1,6 @@
+import AuthToggle from "../Auth/Authtoggle"
 import Login from "../Auth/Login"
+import Register from "../Auth/Register"
 import Blog from "../Blogs/Blog"
 import BlogDetail from "../Blogs/BlogDetail"
 import Detail from "../Detail/Detail"
@@ -14,6 +16,7 @@ const Layout = ()=>{
             {/* <Header/>
             <BlogDetail/>
             <Footer/> */}
+            {/* <AuthToggle/> */}
             <Login/>
         </>
     )
