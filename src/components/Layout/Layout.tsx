@@ -1,3 +1,6 @@
+import Login from "../Auth/Login"
+import Blog from "../Blogs/Blog"
+import BlogDetail from "../Blogs/BlogDetail"
 import Detail from "../Detail/Detail"
 import Slider from "../Slider/Slider"
 import Banner from "./Banner/Banner"
@@ -8,15 +11,10 @@ import Header from "./Header/Header"
 const Layout = ()=>{
     return (
         <>
-            <Header/>
-            {/* <Banner/>
-            <Film/>
-            <Film/>
-            <Film/>
-            <Film/>
-            <Slider/> */}
-            <Detail/>
-            <Footer/>
+            {/* <Header/>
+            <BlogDetail/>
+            <Footer/> */}
+            <Login/>
         </>
     )
 }
